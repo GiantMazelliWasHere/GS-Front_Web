@@ -1,0 +1,67 @@
+@import './variaveis';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header, .navegar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em;
+}
+
+header {
+    background-color: $black;
+}
+
+.navegar {
+    gap: 3em;
+    font-size: 20px;
+    flex-wrap: wrap;
+    margin-right: 1em;
+}
+
+.navegar a {
+    text-decoration-line: none;
+    color: $white;
+}
+
+body {
+    /* fallback for old browsers */
+    background-color: #EDECE1 !important;
+}
+
+.marg {
+    margin-top: 5rem;
+}
+
+
+// .container, .navegar {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 0.5em;
+// }
+
+// .container {
+//     background-color: $black;
+// }
+
+// .navegar {
+//     gap: 3em;
+//     font-size: 20px;
+//     flex-wrap: wrap;
+//     margin-right: 1em;
+// }
+
+// .login{
+    
+// }
+
+// a {
+//     text-decoration: none;
+//     color: $white;
+// }
