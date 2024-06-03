@@ -33,4 +33,31 @@ body {
 
 .marg {
   margin-top: 5rem;
+}
+
+.link_login {
+  width: 10rem;
+  height: 3rem;
+}
+
+.link_login {
+  text-decoration: none;
+  color: white;
+}
+
+.container_404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.icone_404 {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 10px;
+}
+
+.text_404 {
+  font-size: 5rem;
 }/*# sourceMappingURL=estilizacao.css.map */

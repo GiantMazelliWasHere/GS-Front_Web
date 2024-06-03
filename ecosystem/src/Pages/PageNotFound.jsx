@@ -1,7 +1,12 @@
+import { MdBrokenImage } from "react-icons/md";
+
 function PageNotFound() {
     return ( 
         <>
-            <h1>404 Page Not Found</h1>
+            <div className="container_404 mt-5">
+                <MdBrokenImage className="icone_404"/>
+                <p className="text_404">404 Page Not Found</p>
+            </div>
         </>
      );
 }

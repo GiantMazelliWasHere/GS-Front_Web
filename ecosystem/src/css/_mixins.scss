@@ -1,0 +1,12 @@
+
+
+
+@mixin btn(){
+    text-decoration: none;
+    color: white;
+}
+
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}

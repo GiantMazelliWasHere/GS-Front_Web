@@ -1,4 +1,5 @@
-@import './variaveis';
+@use 'mixins';
+@import 'variaveis';
 
 *{
     margin: 0;
@@ -38,6 +39,29 @@ body {
     margin-top: 5rem;
 }
 
+.link_login{
+    @include mixins.size(10rem, 3rem);
+}
+
+.link_login{
+    @include mixins.btn()
+}
+
+.container_404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+    
+.icone_404{
+    @include mixins.size(6rem, 6rem);
+    margin-right: 10px;
+}
+
+.text_404 {
+    font-size: 5rem;
+}
 
 // .container, .navegar {
 //     display: flex;
