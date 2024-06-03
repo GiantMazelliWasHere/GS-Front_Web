@@ -1,7 +1,11 @@
+import React from 'react';
+import Card from '../Components/Card/Card';
+
 function Sobre() {
     return ( 
         <>
-            <h1>Sobre Nós</h1>
+            <h1>Nossa Equipe</h1>
+            <Card/>
         </>
      );
 }
