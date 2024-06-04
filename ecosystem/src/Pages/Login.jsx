@@ -29,9 +29,9 @@ function Login() {
                 <h2 className="fw-bold mb-2 text-uppercase"><img src="./src/imgs/Titulo.png" alt="" /></h2>
                 <p className="text-white-50 mb-5">Por favor digite seu Login e Senha</p>
 
-                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email' id='formControlLg' type='email' size="lg" onChange={(e) => setEmail(e.target.value)} required/>
+                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email' id='formControlLg' type='email' placeholder='nome@hotmail.com' size="lg" onChange={(e) => setEmail(e.target.value)} required/>
                 
-                <MDBInput wrapperClass='mx-5 w-100' labelClass='text-white' label='Senha' id='formControlLg' type='password' size="lg" onChange={(e) => setPassword(e.target.value)} required/>
+                <MDBInput wrapperClass='mx-5 w-100' labelClass='text-white' label='Senha' id='senha' type='password' size="lg" onChange={(e) => setPassword(e.target.value)} required/>
                 
 
                 <p className="small mb-3 mt-0 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>

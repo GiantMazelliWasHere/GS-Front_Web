@@ -63,6 +63,36 @@ body {
     font-size: 5rem;
 }
 
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    margin: 0.3em;
+}
+
+.Photo img {
+    width: 15em;
+    height: 15em;
+}
+
+.informacoes {
+    display: flex;
+    background-color: #2CA5BD;
+    justify-content: center;
+    box-shadow: 0.5em 0.5em 0.5em #000;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 3em;
+}
+
+.integrantes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 // .container, .navegar {
 //     display: flex;
 //     justify-content: space-between;
