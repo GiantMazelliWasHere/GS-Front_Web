@@ -1,5 +1,6 @@
 import { FaLinkedin } from "react-icons/fa";
 import Integrantes from '../../../dados/integrantes.json';
+import { IconContext } from "react-icons";
 
 export default function Card() {
     return (
@@ -13,8 +14,9 @@ export default function Card() {
                         <h3 className="nome">{integrante.nome}</h3>
                         <h4 className="cargo">{integrante.cargo}</h4>
                         <h2 className="empresa">Grupo EcoSystem</h2>
-                        <a className="linkedin" href={integrante.linkedin}> <FaLinkedin/> </a>
-
+                        <IconContext.Provider value={{size:"3em", color: "black"}}>
+                            <a className="icon" href={integrante.linkedin}> <FaLinkedin/> </a>
+                        </IconContext.Provider>
                     </div>
                 </div>
             ))}

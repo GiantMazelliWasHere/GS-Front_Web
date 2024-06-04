@@ -63,67 +63,76 @@ body {
     font-size: 5rem;
 }
 
-
-.titulo_sobre{
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    margin: 0.3em;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 5rem;
-    font-weight: bold;
-    @include mixins.flex(row, center, center, wrap);
-    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 1rem, 1rem, 0, 1rem);
 }
 
-
 .integrantes{
-    @include mixins.flex(row, center, center, wrap);
+    @include mixins.flex(row, space-evenly, wrap);
 }
 
 .integrante{
-    @include mixins.flex(row, center, center, wrap);
-    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 1rem, 1rem, 0, 1rem);
-}
-
-.photo{
-    @include mixins.size(10rem, 10rem);   
+    @include mixins.flex(row, center, wrap);
+    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 0, 0, 0, 0.5rem);
+    background-color: #2CA5BD;
+    box-shadow: 0.2em 0.2em 0.2em #000;
 }
 
 .photo img{
-    @include mixins.size(100%, 100%);
+    @include mixins.size(15em, 15em);
     object-fit: cover;
-
 }
 
-.info{
-    background-color: $aqua;
-    
+.info {
+    @include mixins.flex(column, space-between, wrap);
+    font-family: "Public Sans", sans-serif;
 }
 
-.info .nome{
-    font-size: 1.5rem;
+.icon{
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: flex-end;
+}
+
+.icon :hover{
+    color: $white;
+    transition: 0.2s;
+}
+
+.nome{
+    font-size: 2.5rem;
     font-weight: bold;
+}
+
+.empresa{
+    font-size: 2.5rem;
+}
+
+.continue{
+    @include mixins.size(25rem, 3rem);
 
 }
-// .container, .navegar {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding: 0.5em;
-// }
 
-// .container {
-//     background-color: $black;
-// }
+.esqueceusenha{
+    font-family: "Bebas Neue", sans-serif;
+}
 
-// .navegar {
-//     gap: 3em;
-//     font-size: 20px;
-//     flex-wrap: wrap;
-//     margin-right: 1em;
-// }
+.esqueceusenha .titulo{
+    font-weight: bold;
+    @include mixins.espacamento(1rem, 0, 1rem, 1rem, 0, 0, 0, 0);
+}
 
-// .login{
-    
-// }
-
-// a {
-//     text-decoration: none;
-//     color: $white;
-// }
+.footer{
+    background-color: $creme;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include mixins.flex(row, center, wrap);
+    @include mixins.espacamento(1rem, 0, 0, 0, 0, 0, 0, 0);
+    font-family: "Public Sans", sans-serif;
+    font-weight: bold;
+}

@@ -62,29 +62,18 @@ body {
   font-size: 5rem;
 }
 
-.titulo_sobre {
-  font-size: 5rem;
-  font-weight: bold;
+.apresentacao {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 0;
-  padding-right: 1rem;
+  margin: 0.3em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
 }
 
 .integrantes {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -92,35 +81,92 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   margin-top: 3rem;
   margin-bottom: 3rem;
   margin-left: 3rem;
   margin-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 0;
-  padding-right: 1rem;
-}
-
-.photo {
-  width: 10rem;
-  height: 10rem;
+  padding-right: 0.5rem;
+  background-color: #2CA5BD;
+  box-shadow: 0.2em 0.2em 0.2em #000;
 }
 
 .photo img {
-  width: 100%;
-  height: 100%;
+  width: 15em;
+  height: 15em;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .info {
-  background-color: #1F7A8C;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "Public Sans", sans-serif;
 }
 
-.info .nome {
-  font-size: 1.5rem;
+.icon {
+  display: flex;
+  flex-flow: row, wrap;
+  justify-content: flex-end;
+}
+
+.icon :hover {
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.nome {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.empresa {
+  font-size: 2.5rem;
+}
+
+.continue {
+  width: 25rem;
+  height: 3rem;
+}
+
+.esqueceusenha {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.esqueceusenha .titulo {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.footer {
+  background-color: #EAD7A7;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Public Sans", sans-serif;
   font-weight: bold;
 }/*# sourceMappingURL=estilizacao.css.map */

@@ -29,12 +29,12 @@ function Login() {
                 <h2 className="fw-bold mb-2 text-uppercase"><img src="./src/imgs/Titulo.png" alt="" /></h2>
                 <p className="text-white-50 mb-5">Por favor digite seu Login e Senha</p>
 
-                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email' id='formControlLg' type='email' size="lg" onChange={(e) => setEmail(e.target.value)} required/>
+                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email' id='formControlLg' type='email' placeholder='nome@hotmail.com' size="lg" required/>
                 
-                <MDBInput wrapperClass='mx-5 w-100' labelClass='text-white' label='Senha' id='formControlLg' type='password' size="lg" onChange={(e) => setPassword(e.target.value)} required/>
+                <MDBInput wrapperClass='mx-5 w-100' labelClass='text-white' label='Senha' id='senha' type='password' size="lg" placeholder='password'  required/>
                 
 
-                <p className="small mb-3 mt-0 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+                <p className="small mb-3 mt-0 pb-lg-2"><Link to={'/esqueceusenha'}>Esqueceu a Senha?</Link></p>
                 <MDBBtn outline className='mx-2 px-5 btn btn-primary link_login' color='white' size='lg'>
                 <Link className="link_login" to={"/dashboard"}>Login</Link>
                 </MDBBtn>
