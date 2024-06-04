@@ -37,6 +37,7 @@ body {
 
 .marg {
     margin-top: 5rem;
+    margin-bottom: 5rem
 }
 
 .link_login{
@@ -45,6 +46,16 @@ body {
 
 .link_login{
     @include mixins.btn()
+}
+
+.login_btns{
+    @include mixins.flex(row, center, wrap);
+    @include mixins.espacamento(1rem, 0, 1rem, 0, 0, 0, 0, 0);
+}
+
+.google_icon {
+    @include mixins.size(2rem, 2rem);
+
 }
 
 .container_404{
@@ -115,11 +126,6 @@ body {
     font-size: 2.5rem;
 }
 
-.continue{
-    @include mixins.size(25rem, 3rem);
-
-}
-
 .esqueceusenha{
     font-family: "Bebas Neue", sans-serif;
 }
@@ -129,13 +135,23 @@ body {
     @include mixins.espacamento(1rem, 0, 1rem, 1rem, 0, 0, 0, 0);
 }
 
-.footer{
+.alerta-esqueceu{
+    @include mixins.flex(row, center, wrap);
+    @include mixins.size(100%, 2rem);
+    margin-bottom: 1rem
+}
+
+.continue{
+    @include mixins.size(100%, 3rem);
+}
+
+footer{
     background-color: $creme;
     position: fixed;
     bottom: 0;
     width: 100%;
     @include mixins.flex(row, center, wrap);
-    @include mixins.espacamento(1rem, 0, 0, 0, 0, 0, 0, 0);
+    margin-top: 5rem;
     font-family: "Public Sans", sans-serif;
     font-weight: bold;
 }
