@@ -5,8 +5,8 @@ export default function Card() {
     return (
         <>
             {Integrantes.map(integrante=>(
-                <div>
-                    <div className="Photo">
+                <div className="integrante">
+                    <div className="photo">
                         <img src={integrante.photo} alt={integrante.nome} />
                     </div>
                     <div className="info">

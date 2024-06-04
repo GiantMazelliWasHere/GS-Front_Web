@@ -63,6 +63,44 @@ body {
     font-size: 5rem;
 }
 
+
+.titulo_sobre{
+    font-size: 5rem;
+    font-weight: bold;
+    @include mixins.flex(row, center, center, wrap);
+    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 1rem, 1rem, 0, 1rem);
+}
+
+
+.integrantes{
+    @include mixins.flex(row, center, center, wrap);
+}
+
+.integrante{
+    @include mixins.flex(row, center, center, wrap);
+    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 1rem, 1rem, 0, 1rem);
+}
+
+.photo{
+    @include mixins.size(10rem, 10rem);   
+}
+
+.photo img{
+    @include mixins.size(100%, 100%);
+    object-fit: cover;
+
+}
+
+.info{
+    background-color: $aqua;
+    
+}
+
+.info .nome{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
 // .container, .navegar {
 //     display: flex;
 //     justify-content: space-between;
