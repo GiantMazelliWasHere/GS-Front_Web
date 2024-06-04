@@ -1,11 +1,11 @@
-import { MdBrokenImage } from "react-icons/md";
+import { GiWaveSurfer } from "react-icons/gi";
 
 function PageNotFound() {
     return ( 
         <>
             <div className="container_404 mt-5">
-                <MdBrokenImage className="icone_404"/>
-                <p className="text_404">404 Page Not Found</p>
+                <GiWaveSurfer className="icone_404"/>
+                <p className="text_404">404 You Surfed to the Wrong Beach, brother</p>
             </div>
         </>
      );

@@ -49,6 +49,8 @@ body {
 
 .container_404{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -56,11 +58,12 @@ body {
     
 .icone_404{
     @include mixins.size(6rem, 6rem);
-    margin-right: 10px;
+    @include mixins.espacamento(0.5rem, 0.5rem, 0.5rem, 0.5rem, 0, 0, 0, 0);
 }
 
 .text_404 {
-    font-size: 5rem;
+    font-size: 3rem;
+    @include mixins.espacamento(0.5rem, 0.5rem, 0.5rem, 0.5rem, 0, 0, 0, 0);
 }
 
 .apresentacao {
