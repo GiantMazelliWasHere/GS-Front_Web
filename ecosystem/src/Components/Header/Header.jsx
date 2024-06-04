@@ -6,7 +6,7 @@ function Header(){
         <>
         <header>
             <div>
-                <img src="./src/imgs/Titulo.png" alt="" />
+                <img src="./src/imgs/Titulo.png" alt="" className='img-ecosystem-header'/>
             </div>
             <div className="navegar">
                 <div className="home"><Link to={'/'}><a href="">Home</a></Link></div>
