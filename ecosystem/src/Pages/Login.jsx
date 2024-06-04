@@ -1,4 +1,4 @@
-import React, { createElement, useState } from 'react';
+import React, { useState } from 'react';
 import {
 MDBBtn,
 MDBContainer,
@@ -11,7 +11,6 @@ MDBInput,
 import { Link } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
 import { AiFillGoogleSquare } from "react-icons/ai";
-import Alert from 'react-bootstrap/Alert'
 
 
 
@@ -45,9 +44,6 @@ function Login() {
         limpeza2;
     }
 
-
-
-
     const login = useGoogleLogin({
         onSuccess: (tokenResponse) => console.log(tokenResponse),
     })
@@ -76,7 +72,7 @@ function Login() {
 
                 <p className=" small mb-3 mt-0 pb-lg-2"><Link to={'/esqueceusenha'}>Esqueceu a Senha?</Link></p>
                 <MDBBtn outline className='mx-2 px-5 btn btn-primary link_login' color='white' size='lg' onClick={submitHandler}>
-                <p className='btn_link'>Login</p>
+                Login
                 </MDBBtn>
                 
                 <div className="mt-3">

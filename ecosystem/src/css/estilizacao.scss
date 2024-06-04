@@ -35,6 +35,44 @@ body {
     background-color: #EDECE1 !important;
 }
 
+.carrossel img{
+    @include mixins.size(100%, 35em);
+    object-fit: cover;
+}
+
+.home_info{
+    @include mixins.flex(row, center, wrap);
+    @include mixins.espacamento(1rem, 0, 1rem, 1rem,0, 0, 0, 0);
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold
+    
+}
+
+.cta{
+    @include mixins.flex(row, space-between, wrap);
+    align-items: center;
+    @include mixins.espacamento(1rem, 5rem, 1rem, 0, 0, 0, 0, 0);
+    
+}
+
+.btn-cta{
+    @include mixins.size(25rem, 3rem);
+    @include mixins.espacamento(0, 0, 0, 5rem, 0, 0, 0, 0);
+    @include mixins.flex(row, center, wrap);
+    
+}
+
+.cta_info{
+    font-size: 1.5rem
+}
+
+.link-cta{
+    @include mixins.btn();
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+}
+
 .marg {
     margin-top: 5rem;
     margin-bottom: 5rem
@@ -144,6 +182,10 @@ body {
 .continue{
     @include mixins.size(100%, 3rem);
 }
+
+.btn_cadastro{
+    @include mixins.size(20rem, 3rem);
+} 
 
 footer{
     background-color: $creme;
