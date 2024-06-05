@@ -11,6 +11,7 @@ import PageNotFound from "./Pages/PageNotFound.jsx";
 import EsqueceuSenha from "./Pages/EsqueceuSenha.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import Test from "./Pages/Teste.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       {path: "dashboard", element: <Dashboard/>},
       {path: "cadastro", element: <Cadastro/>},
       {path: "esqueceusenha", element: <EsqueceuSenha/>},
+      {path: "teste", element: <Test/>},
       {path: "*", element: <PageNotFound/>}
 
     ]

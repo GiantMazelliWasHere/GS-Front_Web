@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,  } from 'react';
 import {
 MDBBtn,
 MDBContainer,
@@ -8,7 +8,7 @@ MDBCard,
 MDBCardBody,
 MDBInput,
 } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
 import { AiFillGoogleSquare } from "react-icons/ai";
 
@@ -18,30 +18,29 @@ function Login() {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const navigate = useNavigate();
     
     const submitHandler = (e) => {
-        const alerta = document.createElement('h2');
-        const msg = document.getElementById('msg');
-        const limpeza = msg.innerHTML = '';
-        const limpeza2 = msg.style.backgroundColor = 'transparent';
-        
-        e.preventDefault();
-        if(email === '') {
-            limpeza
-            alerta.className = ('alerta', 'w-100');
-            alerta.innerHTML = 'Preencha o Email';
-            msg.style.backgroundColor = 'red';
-            return msg.appendChild(alerta);
+        const msgEmail = document.getElementById('msg-email');
+        const msgSenha = document.getElementById('msg-senha');
+        const limpezaEmail = msgEmail.innerHTML = '';
+        const limpezaSenha = msgSenha.innerHTML = '';
+
+        if (email === '') {
+            limpezaEmail;
+            limpezaSenha;
+            msgEmail.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Email!</div>';
+            return false;
         }
-        if(senha === '') {
-            limpeza;
-            alerta.className = ('alerta', 'w-100');
-            alerta.innerHTML = 'Preencha a Senha';
-            msg.style.backgroundColor = 'red';
-            return msg.appendChild(alerta);
+        if (senha === '') {
+            limpezaEmail;
+            limpezaSenha;
+            msgSenha.innerHTML = '<div class="alert alert-danger" role="alert">Forneça sua Senha!</div>';
+            return false;
         }
-        limpeza;
-        limpeza2;
+        limpezaEmail;
+        limpezaSenha;
+        return navigate('/dashboard');
     }
 
     const login = useGoogleLogin({
@@ -63,15 +62,12 @@ function Login() {
                 <p className="text-white-50 mb-5">Por favor digite seu Login e Senha</p>
 
                 <MDBInput wrapperClass='mb-1 mx-5 w-100' labelClass='text-white' label='Email' id='formControlLg' type='email' placeholder='nome@hotmail.com' size="lg" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-            
-
+                <div id='msg-email'></div>
                 <MDBInput wrapperClass=' mx-5 w-100' labelClass='text-white' label='Senha' id='senha' type='password' size="lg" placeholder='password' value={senha} onChange={(e) => setSenha(e.target.value)}  required/>
-                <div className='alert' id='msg'>
-                </div>
-                
+                <div id="msg-senha"></div>
 
                 <p className=" small mb-3 mt-0 pb-lg-2"><Link to={'/esqueceusenha'}>Esqueceu a Senha?</Link></p>
-                <MDBBtn outline className='mx-2 px-5 btn btn-primary link_login' color='white' size='lg' onClick={submitHandler}>
+                <MDBBtn outline className='mx-2 px-5 btn btn-primary link_login' id='btn' color='white' size='lg' onClick={submitHandler}>
                 Login
                 </MDBBtn>
                 
