@@ -35,6 +35,7 @@ body {
 
 .marg {
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .link_login {
@@ -47,8 +48,30 @@ body {
   color: white;
 }
 
+.login_btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.google_icon {
+  width: 2rem;
+  height: 2rem;
+}
+
 .container_404 {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -57,41 +80,80 @@ body {
 .icone_404 {
   width: 6rem;
   height: 6rem;
-  margin-right: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .text_404 {
-  font-size: 5rem;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .apresentacao {
   display: flex;
   justify-content: center;
-  margin: 0.3em;
+  margin: 0.1em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
 }
 
-.Photo img {
-  width: 15em;
-  height: 15em;
-}
-
-.informacoes {
+.integrantes {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.integrante {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0.5rem;
   background-color: #2CA5BD;
   justify-content: center;
   box-shadow: 0.2em 0.2em 0.2em #000;
+  box-shadow: 0.2em 0.2em 0.2em #000;
+}
+
+.photo img {
+  width: 15em;
+  height: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 3em;
+  flex-wrap: wrap;
+  font-family: "Public Sans", sans-serif;
 }
 
-.integrantes {
+.icon {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 641px) {
@@ -99,5 +161,157 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+}
+.icon :hover {
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.nome {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.empresa {
+  font-size: 2.5rem;
+}
+
+.esqueceusenha {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.esqueceusenha .titulo {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.alerta-esqueceu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.continue {
+  width: 100%;
+  height: 3rem;
+}
+
+footer {
+  background-color: #EAD7A7;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  font-size: 1.1em;
+  font-family: "Public Sans", sans-serif;
+  font-weight: bold;
+}
+
+.paineis {
+  display: flex;
+  justify-content: space-around;
+}
+
+.paineis2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.painel-1, .painel-2, .painel-3 {
+  width: 18rem;
+  height: 24rem;
+  border-radius: 5%;
+  margin: 2em 2em;
+  background-color: #090A09;
+}
+
+.painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+  width: 18rem;
+  height: 24rem;
+  border-radius: 5%;
+  margin: 2em 2em;
+  background-color: #090A09;
+}
+
+.painel-2-embaixo, .painel-3-embaixo {
+  width: 30rem;
+}
+
+.painel-2, .painel-3 {
+  width: 30rem;
+}
+
+.paineis {
+  color: #ffffff;
+}
+
+.paineis2 {
+  color: #ffffff;
+}
+
+#Titulo-painel-1, #Titulo-painel-2, #Titulo-painel-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.texto-painel-1, .texto-painel-2, .texto-painel-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 17rem;
+}
+
+#Titulo-painel-1-embaixo, #Titulo-painel-2-embaixo, #Titulo-painel-3-embaixo {
+  display: flex;
+  justify-content: center;
+}
+
+.texto-painel-1-embaixo, .texto-painel-2-embaixo, .texto-painel-3-embaixo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 17rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .paineis, .paineis2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+    width: 18rem;
+    height: 24rem;
+    border-radius: 5%;
+    margin: 2em 2em;
+    background-color: #090A09;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .painel-1, .painel-2, .painel-3 {
+    width: 18rem;
+    height: 24rem;
+    border-radius: 5%;
+    margin: 2em 2em;
+    background-color: #090A09;
   }
 }/*# sourceMappingURL=estilizacao.css.map */

@@ -39,6 +39,7 @@ body {
 
 .marg {
     margin-top: 5rem;
+    margin-bottom: 5rem
 }
 
 .link_login{
@@ -49,8 +50,20 @@ body {
     @include mixins.btn()
 }
 
+.login_btns{
+    @include mixins.flex(row, center, wrap);
+    @include mixins.espacamento(1rem, 0, 1rem, 0, 0, 0, 0, 0);
+}
+
+.google_icon {
+    @include mixins.size(2rem, 2rem);
+
+}
+
 .container_404{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -58,41 +71,48 @@ body {
     
 .icone_404{
     @include mixins.size(6rem, 6rem);
-    margin-right: 10px;
+    @include mixins.espacamento(0.5rem, 0.5rem, 0.5rem, 0.5rem, 0, 0, 0, 0);
 }
 
 .text_404 {
-    font-size: 5rem;
+    font-size: 3rem;
+    @include mixins.espacamento(0.5rem, 0.5rem, 0.5rem, 0.5rem, 0, 0, 0, 0);
 }
 
 .apresentacao {
     display: flex;
     justify-content: center;
-    margin: 0.3em;
+    margin: 0.1em;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5rem;
 }
 
-.Photo img {
-    width: 15em;
-    height: 15em;
+.integrantes{
+    @include mixins.flex(row, space-evenly, wrap);
 }
 
-.informacoes {
-    display: flex;
+.integrante{
+    @include mixins.flex(row, center, wrap);
+    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 0, 0, 0, 0.5rem);
     background-color: #2CA5BD;
     justify-content: center;
     box-shadow: 0.2em 0.2em 0.2em #000;
+    box-shadow: 0.2em 0.2em 0.2em #000;
+}
+
+.photo img{
+    @include mixins.size(15em, 15em);
+    object-fit: cover;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-right: 3em;
+    @include mixins.flex(column, space-between, wrap);
+    font-family: "Public Sans", sans-serif;
 }
 
-.integrantes {
+.icon{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     // background-color: #2CA5BD;
 }
 
@@ -106,4 +126,139 @@ body {
 }
 
 
+.icon :hover{
+    color: $white;
+    transition: 0.2s;
+}
 
+.nome{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.empresa{
+    font-size: 2.5rem;
+}
+
+.esqueceusenha{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.esqueceusenha .titulo{
+    font-weight: bold;
+    @include mixins.espacamento(1rem, 0, 1rem, 1rem, 0, 0, 0, 0);
+}
+
+.alerta-esqueceu{
+    @include mixins.flex(row, center, wrap);
+    @include mixins.size(100%, 2rem);
+    margin-bottom: 1rem
+}
+
+.continue{
+    @include mixins.size(100%, 3rem);
+}
+
+footer{
+    background-color: $creme;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include mixins.flex(row, center, wrap);
+    margin-top: 5rem;
+    font-size: 1.1em;
+    font-family: "Public Sans", sans-serif;
+    font-weight: bold;
+}
+
+.paineis {
+    display: flex;
+    justify-content: space-around;
+}
+
+.paineis2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.painel-1, .painel-2, .painel-3 {
+    @include mixins.size(18rem, 24rem);
+    border-radius: 5%;
+    margin: 2em 2em;
+    background-color: $cinza;
+}
+
+.painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+    @include mixins.size(18rem, 24rem);
+    border-radius: 5%;
+    margin: 2em 2em;
+    background-color: $cinza;
+}
+
+.painel-2-embaixo, .painel-3-embaixo {
+    width: 30rem;
+}
+.painel-2, .painel-3 {
+    width: 30rem;
+}
+
+.paineis{
+    color: $white;
+}
+
+.paineis2{
+    color: $white;
+}
+
+
+#Titulo-painel-1, #Titulo-painel-2, #Titulo-painel-3{
+    display: flex;
+    justify-content: center;
+}
+
+.texto-painel-1, .texto-painel-2, .texto-painel-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 17rem;
+}
+
+#Titulo-painel-1-embaixo, #Titulo-painel-2-embaixo, #Titulo-painel-3-embaixo{
+    display: flex;
+    justify-content: center;
+}
+
+.texto-painel-1-embaixo, .texto-painel-2-embaixo, .texto-painel-3-embaixo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 17rem;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .paineis, .paineis2  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+    @include mixins.size(18rem, 24rem);
+    border-radius: 5%;
+    margin: 2em 2em;
+    background-color: $cinza;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .painel-1, .painel-2, .painel-3 {
+    @include mixins.size(18rem, 24rem);
+    border-radius: 5%;
+    margin: 2em 2em;
+    background-color: $cinza;
+    }
+}

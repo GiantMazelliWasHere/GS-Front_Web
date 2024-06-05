@@ -8,7 +8,7 @@ function Sobre() {
             <hr />
             <div className="integrantes">
 
-            <Card/>
+                <Card/>
             </div>
         </>
      );
