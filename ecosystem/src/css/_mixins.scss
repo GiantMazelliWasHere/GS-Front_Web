@@ -5,11 +5,14 @@
     flex-wrap: $wrap;
 }
 
-@mixin espacamento($mt, $mb, $ml, $mr, $pt, $pb, $pl, $pr){
+@mixin margin($mt, $mb, $ml, $mr){
     margin-top: $mt;
     margin-bottom: $mb;
     margin-left: $ml;
-    margin-right: $mr;
+    margin-right: $mr; 
+}
+
+@mixin padding($pt, $pb, $pl, $pr){
     padding-top: $pt;
     padding-bottom: $pb;
     padding-left: $pl;
@@ -24,4 +27,10 @@
 @mixin size($w, $h){
     width: $w;
     height: $h;
+}
+
+@mixin font($f, $s, $w: normal){
+    font-family: $f;
+    font-size: $s;
+    font-weight: $w;
 }

@@ -13,28 +13,28 @@ function EsqueceuSenha() {
     const [nome, setNome] = useState('');
     
     const submitHandler = (e) => {
-        const alerta = document.createElement('h2');
-        const msg = document.getElementById('msg');
-        const alertaClass = alerta.className = ('alerta');
-        const limpeza = msg.innerHTML = '';
-        const limpeza2 = msg.style.backgroundColor = 'transparent';
+        const msgnome = document.getElementById('msgNome');
+        const msgEmail = document.getElementById('msgEmail');
+        const msgSucesso = document.getElementById('msgSucesso');
+        const limpezaNome = msgnome.innerHTML = '';
+        const limpezaEmail = msgEmail.innerHTML = '';
+       
         
         e.preventDefault();
         if(nome === '') {
-            limpeza2;
-            alerta.innerHTML = 'Preencha seu Nome';
-            msg.style.backgroundColor = 'red';
-            return msg.appendChild(alerta);
+            msgnome.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Nome!</div>';
+            return false;
         }
         if(email === '') {
-            limpeza2;
-            alerta.innerHTML = 'Preencha seu Email';
-            msg.style.backgroundColor = 'red';
-            return msg.appendChild(alerta);
+            msgEmail.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Email!</div>';
+            return false;
         }
-        alerta.innerHTML = 'Cheque seu Email';
-        msg.style.backgroundColor = 'green';
-        msg.appendChild(alerta);
+        limpezaNome;
+        limpezaEmail;
+        msgSucesso.innerHTML = '<div class="alert alert-success" role="alert">Cheque seu Email!</div>';
+        localStorage.setItem('nome', nome);
+        localStorage.setItem('email', email);
+        console.log(`Nome: ${localStorage.getItem('nome')} Email: ${localStorage.getItem('email')}`);
     }
 
     return ( 
@@ -44,9 +44,12 @@ function EsqueceuSenha() {
                 <MDBCardBody className='px-5'>
                     <h2 className="titulo text-uppercase text-center mb-5">Recuperação de Senha</h2>
                     <MDBInput wrapperClass='mb-4' label='Nome' size='lg' id='form1' type='text' placeholder='Nome Completo' value={nome} onChange={(e) => setNome(e.target.value)}/>
+                    <div id='msgNome'></div>
                     <MDBInput wrapperClass='mb-4' label='Email' size='lg' id='form2' type='email' placeholder='nome@hotmail.com' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <div className='alerta-esqueceu' id='msg'></div>
+                    <div id='msgEmail'></div>
+                    <div id='msgSucesso'></div>
                     <MDBBtn className='btn btn-primary continue' size='lg' type='submit' onClick={submitHandler}>Continue</MDBBtn>
+                    
                 </MDBCardBody>
             </MDBCard>
         </MDBContainer>

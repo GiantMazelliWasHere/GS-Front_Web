@@ -34,7 +34,7 @@ header {
 
 body {
     /* fallback for old browsers */
-    background-color: #EDECE1 !important;
+    background-color: $branco !important;
 }
 
 .carrossel img{
@@ -44,23 +44,20 @@ body {
 
 .home_info{
     @include mixins.flex(row, center, wrap);
-    @include mixins.espacamento(1rem, 0, 1rem, 1rem,0, 0, 0, 0);
-    font-family: "Public Sans", sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 2em;
+    @include mixins.margin(1rem, 2em, 1rem, 1rem);
+    @include mixins.font($public, 1.5rem, $bold);
 }
 
 .cta{
     @include mixins.flex(row, space-between, wrap);
     align-items: center;
-    @include mixins.espacamento(1rem, 5rem, 1rem, 0, 0, 0, 0, 0);
+    @include mixins.margin(1rem, 5rem, 1rem, 0);
     
 }
 
 .btn-cta{
     @include mixins.size(25rem, 3rem);
-    @include mixins.espacamento(0, 0, 0, 5rem, 0, 0, 0, 0);
+    @include mixins.margin(0, 0, 0, 5rem);
     @include mixins.flex(row, center, wrap);
     
 }
@@ -71,13 +68,11 @@ body {
 
 .link-cta{
     @include mixins.btn();
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5rem;
+    @include mixins.font($bebas, 1.5rem)
 }
 
 .marg {
-    margin-top: 5rem;
-    margin-bottom: 5rem
+    @include mixins.margin(5rem, 5rem, 0, 0);
 }
 
 .link_login{
@@ -90,7 +85,7 @@ body {
 
 .login_btns{
     @include mixins.flex(row, center, wrap);
-    @include mixins.espacamento(1rem, 0, 1rem, 0, 0, 0, 0, 0);
+    @include mixins.margin(1rem, 0, 1rem, 0)
 }
 
 .google_icon {
@@ -99,30 +94,26 @@ body {
 }
 
 .container_404{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include mixins.flex(row, center, wrap);
     align-items: center;
     align-content: center;
 }
     
 .icone_404{
     @include mixins.size(6rem, 6rem);
-    @include mixins.espacamento(0.5rem, 0.5rem, 0.5rem, 0.5rem, 0, 0, 0, 0);
+    @include mixins.margin(0.5rem, 0.5rem, 0.5rem, 0.5rem);
 }
 
 .text_404 {
     font-size: 3rem;
-    @include mixins.espacamento(0.5rem, 0.5rem, 0.5rem, 0.5rem, 0, 0, 0, 0);
+    @include mixins.margin(0.5rem, 0.5rem, 0.5rem, 0.5rem);
 }
 
 .apresentacao {
     display: flex;
     justify-content: center;
-    margin: 0.1em;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 5rem;
+    @include mixins.margin(0.1em, 0.1em, 0.1em, 0.1em);
+    @include mixins.font($bebas, 5rem);
 }
 
 .integrantes{
@@ -131,11 +122,12 @@ body {
 
 .integrante{
     @include mixins.flex(row, center, wrap);
-    @include mixins.espacamento(3rem, 3rem, 3rem, 3rem, 0, 0, 0, 0.5rem);
+    @include mixins.margin(3rem, 3rem, 3rem, 3rem);
+    @include mixins.padding(0, 0, 0, 0.5rem);
     background-color: #2CA5BD;
     justify-content: center;
-    box-shadow: 0.2em 0.2em 0.2em #000;
-    box-shadow: 0.2em 0.2em 0.2em #000;
+    box-shadow: 0.2em 0.2em 0.2em $black;
+    box-shadow: 0.2em 0.2em 0.2em $black;
 }
 
 .photo img{
@@ -151,7 +143,6 @@ body {
 .icon{
     display: flex;
     justify-content: flex-end;
-    // background-color: #2CA5BD;
 }
 
 @media screen and (max-width: 641px) {
@@ -184,7 +175,7 @@ body {
 
 .esqueceusenha .titulo{
     font-weight: bold;
-    @include mixins.espacamento(1rem, 0, 1rem, 1rem, 0, 0, 0, 0);
+    @include mixins.margin(1rem, 0, 1rem, 1rem)
 }
 
 .alerta-esqueceu{
@@ -208,9 +199,7 @@ footer{
     width: 100%;
     @include mixins.flex(row, center, wrap);
     margin-top: 5rem;
-    font-size: 1.1em;
-    font-family: "Public Sans", sans-serif;
-    font-weight: bold;
+    @include mixins.font($public, 1.1em, $bold);
 }
 
 
@@ -289,7 +278,17 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
     }
+
+    .painel-1, .painel-2, .painel-3 {
+        background-color: $verde_may;
+    }
+
+    .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+        background-color: $verde_may;
+    }
+
 }
 
 
@@ -300,6 +299,14 @@ footer{
     margin: 2em 2em;
     background-color: $cinza;
     }
+
+    .painel-1, .painel-2, .painel-3 {
+        background-color: $verde_may;
+    }
+
+    .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+        background-color: $verde_may;
+    }
 }
 @media screen and (max-width: 1023px) {
     .painel-1, .painel-2, .painel-3 {
@@ -307,5 +314,17 @@ footer{
     border-radius: 5%;
     margin: 2em 2em;
     background-color: $cinza;
+    }
+
+    .painel-1, .painel-2, .painel-3 {
+        background-color: $verde_may;
+    }
+
+    .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+        background-color: $verde_may;
+    }
+
+    #Titulo-painel-3{
+        margin-left: 1rem;
     }
 }

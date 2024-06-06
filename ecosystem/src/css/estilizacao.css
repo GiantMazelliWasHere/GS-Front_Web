@@ -30,7 +30,7 @@ header {
 
 body {
   /* fallback for old browsers */
-  background-color: #EDECE1 !important;
+  background-color: #edece1 !important;
 }
 
 .carrossel img {
@@ -46,17 +46,12 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 2em;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
   font-family: "Public Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 2em;
 }
 
 .cta {
@@ -69,10 +64,6 @@ body {
   margin-bottom: 5rem;
   margin-left: 1rem;
   margin-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .btn-cta {
@@ -82,10 +73,6 @@ body {
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 5rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,11 +88,14 @@ body {
   color: white;
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
+  font-weight: normal;
 }
 
 .marg {
   margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .link_login {
@@ -127,10 +117,6 @@ body {
   margin-bottom: 0;
   margin-left: 1rem;
   margin-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .google_icon {
@@ -141,8 +127,8 @@ body {
 .container_404 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   align-content: center;
 }
@@ -154,10 +140,6 @@ body {
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .text_404 {
@@ -166,18 +148,18 @@ body {
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .apresentacao {
   display: flex;
   justify-content: center;
-  margin: 0.1em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
   font-family: "Bebas Neue", sans-serif;
   font-size: 5rem;
+  font-weight: normal;
 }
 
 .integrantes {
@@ -202,8 +184,8 @@ body {
   padding-right: 0.5rem;
   background-color: #2CA5BD;
   justify-content: center;
-  box-shadow: 0.2em 0.2em 0.2em #000;
-  box-shadow: 0.2em 0.2em 0.2em #000;
+  box-shadow: 0.2em 0.2em 0.2em #000000;
+  box-shadow: 0.2em 0.2em 0.2em #000000;
 }
 
 .photo img {
@@ -257,10 +239,6 @@ body {
   margin-bottom: 0;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .alerta-esqueceu {
@@ -293,8 +271,8 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 5rem;
-  font-size: 1.1em;
   font-family: "Public Sans", sans-serif;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
@@ -375,6 +353,12 @@ footer {
     align-items: center;
     justify-content: center;
   }
+  .painel-1, .painel-2, .painel-3 {
+    background-color: #3d8f2f;
+  }
+  .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+    background-color: #3d8f2f;
+  }
 }
 @media screen and (max-width: 1023px) {
   .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
@@ -384,6 +368,12 @@ footer {
     margin: 2em 2em;
     background-color: #090A09;
   }
+  .painel-1, .painel-2, .painel-3 {
+    background-color: #3d8f2f;
+  }
+  .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+    background-color: #3d8f2f;
+  }
 }
 @media screen and (max-width: 1023px) {
   .painel-1, .painel-2, .painel-3 {
@@ -392,5 +382,14 @@ footer {
     border-radius: 5%;
     margin: 2em 2em;
     background-color: #090A09;
+  }
+  .painel-1, .painel-2, .painel-3 {
+    background-color: #3d8f2f;
+  }
+  .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
+    background-color: #3d8f2f;
+  }
+  #Titulo-painel-3 {
+    margin-left: 1rem;
   }
 }/*# sourceMappingURL=estilizacao.css.map */

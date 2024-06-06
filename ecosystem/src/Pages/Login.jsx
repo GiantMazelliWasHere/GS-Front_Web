@@ -40,11 +40,18 @@ function Login() {
         }
         limpezaEmail;
         limpezaSenha;
+        localStorage.setItem('email', email);
+        localStorage.setItem('senha', senha);
+        console.log(`Email: ${localStorage.getItem('email')} Senha: ${localStorage.getItem('senha')}`);
         return navigate('/dashboard');
     }
 
     const login = useGoogleLogin({
-        onSuccess: (tokenResponse) => console.log(tokenResponse),
+        onSuccess: (tokenResponse) => {
+            localStorage.setItem('token', tokenResponse),
+            console.log(`${localStorage.getItem('token')}`),
+            navigate('/dashboard')
+        }
     })
     
     return ( 
@@ -73,7 +80,7 @@ function Login() {
                 
                 <div className="mt-3">
                     <MDBBtn outline className='mx-2 px-5 btn btn-primary link_login' color='white' size='lg' onClick={()=>login()}>
-                    <Link className="link_login" to={"/dashboard"}><AiFillGoogleSquare className='google_icon'/></Link>
+                    <AiFillGoogleSquare className='google_icon'/>
                     </MDBBtn>
                 </div>
 

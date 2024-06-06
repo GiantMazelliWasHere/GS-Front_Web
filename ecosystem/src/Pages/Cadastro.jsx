@@ -11,6 +11,7 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+  import { useNavigate } from 'react-router-dom';
 
 function Cadastro() {
   const [email, setEmail] = useState('');
@@ -23,96 +24,88 @@ function Cadastro() {
   const [complemento, setComplemento] = useState('');
   const [termos, setTermos] = useState(false);
   const [informativos, setInformativos] = useState(false);
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
-    const alerta = document.createElement('h2');
-    const msg = document.getElementById('msg');
-    const limpeza = msg.innerHTML = '';
-    const limpeza2 = msg.style.backgroundColor = 'transparent';
-    
+    const msgNome = document.getElementById('msgNome');
+    const msgSobrenome = document.getElementById('msgSobrenome');
+    const msgEmail = document.getElementById('msgEmail');
+    const msgTelefone = document.getElementById('msgTelefone');
+    const msgEndereco = document.getElementById('msgEndereco');
+    const msgSenha = document.getElementById('msgSenha');
+    const msgConfimacao = document.getElementById('msgConfimacao');
+    const msgSucesso = document.getElementById('msgSucesso');
+    const msgTermos = document.getElementById('msgTermos');
+    const limpezaNome = msgNome.innerHTML = '';
+    const limpezaSobrenome = msgSobrenome.innerHTML = '';
+    const limpezaEmail = msgEmail.innerHTML = '';
+    const limpezaTelefone = msgTelefone.innerHTML = '';
+    const limpezaEndereco = msgEndereco.innerHTML = '';
+    const limpezaSenha = msgSenha.innerHTML = '';
+    const limpezaConfimacao = msgConfimacao.innerHTML = '';
+    const limpezaTermos = msgTermos.innerHTML = '';
+
+
+
     e.preventDefault();
     if(nome === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Informe seu nome';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgNome.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Nome!</div>';
+        return false;
       }
     if(sobrenome === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Informe seu sobrenome';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgSobrenome.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Sobrenome!</div>';
+        return false;
     }
     if(email === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Informe seu email';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgEmail.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Email!</div>';
+        return false;
     }
     if(telefone === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Informe seu telefone';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgTelefone.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Telefone!</div>';
+        return false;
     }
 
     if(endereco === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Informe seu endereço';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgEndereco.innerHTML = '<div class="alert alert-danger" role="alert">Forneça seu Endereço!</div>';
+        return false;
     }
 
     if(senha === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Crie uma senha';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgSenha.innerHTML = '<div class="alert alert-danger" role="alert">Crie uma Senha com mais de 8 digitos!</div>';
+        return false;
     }
 
     if(senha.length < 8){
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Senha deve ter no mínimo 8 caracteres';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+      msgSenha.innerHTML = '<div class="alert alert-danger" role="alert">Crie uma Senha com mais de 8 digitos!</div>';
+      return false;
     }
     
     if(confirmarSenha === '') {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Confirme a senha';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgConfimacao.innerHTML = '<div class="alert alert-danger" role="alert">Confirme sua Senha!</div>';
+        return false;
     }
     
     if(confirmarSenha !== senha) {
-        limpeza
-        alerta.className = ('alerta', 'w-100');
-        alerta.innerHTML = 'Senhas não conferem';
-        msg.style.backgroundColor = 'red';
-        return msg.appendChild(alerta);
+        msgConfimacao.innerHTML = '<div class="alert alert-danger" role="alert">Senhas não correspondem!</div>';
+        return false;
     }
 
     if(termos === false) {
-      limpeza;
-      alerta.className = ('alerta', 'w-100');
-      alerta.innerHTML = 'Aceite os termos';
-      msg.style.backgroundColor = 'red';
-      return msg.appendChild(alerta);
+      msgTermos.innerHTML = '<div class="alert alert-danger" role="alert">Aceite os Termos e Políticas de Serviço!</div>';
+      return false;
     }
-    alerta.innerHTML = 'Cadastro Realizado com Sucesso';
-        msg.style.backgroundColor = 'green';
-        msg.appendChild(alerta);
-
+    msgSucesso.innerHTML = '<div class="alert alert-success" role="alert">Cadastro Realizado com Sucesso!</div>';
+    localStorage.setItem('nome', nome);
+    localStorage.setItem('sobrenome', sobrenome);
+    localStorage.setItem('email', email);
+    localStorage.setItem('telefone', telefone);
+    localStorage.setItem('endereco', endereco);
+    localStorage.setItem('complemento', complemento);
+    localStorage.setItem('senha', senha);
+    localStorage.setItem('termos', termos);
+    localStorage.setItem('informativos', informativos);
+    console.log(`Nome: ${nome} Sobrenome: ${sobrenome} Email: ${email} Telefone: ${telefone} Endereço: ${endereco} Complemento: ${complemento} Senha: ${senha}`);
   }
-
 
 
 
@@ -131,10 +124,12 @@ function Cadastro() {
 
                 <MDBCol md='6'>
                   <MDBInput wrapperClass='mb-4' label='Nome' size='lg' id='form1' type='text' value={nome} onChange={(e) => setNome(e.target.value)}/>
+                  <div id='msgNome'></div>
                 </MDBCol>
 
                 <MDBCol md='6'>
                   <MDBInput wrapperClass='mb-4' label='Sobrenome' size='lg' id='form2' type='text' value={sobrenome} onChange={(e) => setSobrenome(e.target.value)}/>
+                  <div id='msgSobrenome'></div>
                 </MDBCol>
 
               </MDBRow>
@@ -143,10 +138,12 @@ function Cadastro() {
 
                 <MDBCol md=''>
                   <MDBInput wrapperClass='mb-4' label='Email' size='lg' id='form4' type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                  <div id='msgEmail'></div>
                 </MDBCol>
                 
                 <MDBCol md='3'>
-                  <MDBInput wrapperClass='mb-4' label='telefone' size='lg' id='form5' type='rel' value={telefone} onChange={(e) => setTelefone(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='telefone' size='lg' id='form5' type='text' value={telefone} onChange={(e) => setTelefone(e.target.value)}/>
+                  <div id='msgTelefone'></div>
                 </MDBCol>
 
                 <MDBCol md='4' className='mb-4'>
@@ -161,30 +158,34 @@ function Cadastro() {
               <MDBRow>
 
                 <MDBCol md='8'>
-                  <MDBInput wrapperClass='mb-4' label='Endereço' size='lg' id='form4' type='email' value={endereco} onChange={(e) => setEndereco(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='Endereço' size='lg' id='form4' type='text' value={endereco} onChange={(e) => setEndereco(e.target.value)}/>
+                  <div id='msgEndereco'></div>
                 </MDBCol>
 
                 <MDBCol md='4'>
-                  <MDBInput wrapperClass='mb-4' label='Complemento' size='lg' id='form5' type='rel' value={complemento} onChange={(e) => setComplemento(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='Complemento' size='lg' id='form5' type='text' value={complemento} onChange={(e) => setComplemento(e.target.value)}/>
                 </MDBCol>
 
               </MDBRow>
               <MDBRow>
 
                 <MDBCol md='6'>
-                  <MDBInput wrapperClass='mb-4' label='Senha' size='lg' id='form4' type='email' value={senha} onChange={(e) => setSenha(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='Senha (8 digitos)' size='lg' id='form4' type='password' value={senha} onChange={(e) => setSenha(e.target.value)}/>
+                  <div id='msgSenha'></div>
                 </MDBCol>
 
                 <MDBCol md='6'>
-                  <MDBInput wrapperClass='mb-4' label='Confirme a Senha' size='lg' id='form5' type='rel' value={confirmarSenha} onChange={(e) => setConfirmarSenha(e.target.value)}/>
+                  <MDBInput wrapperClass='mb-4' label='Confirme a Senha' size='lg' id='form5' type='password' value={confirmarSenha} onChange={(e) => setConfirmarSenha(e.target.value)}/>
+                  <div id='msgConfimacao'></div>
                 </MDBCol>
 
               </MDBRow>
               <hr/>
               <MDBCheckbox id='checkbox1' label='Desejo receber emails informativos.' value={informativos} onChange={(e) => setInformativos(true)}/>
               <MDBCheckbox id='checkbox2' label='Aceito os termos e políticas de serviço.' value={termos} onChange={(e) => setTermos(true)}/>
-              <div id="msg"></div>
-
+              <div id='msgTermos'></div>
+              
+              <div id='msgSucesso'></div>
               <MDBBtn className='mt-1 w-100 btn_cadastro' size='lg' type='submit' onClick={submitHandler}>Cadastre-se</MDBBtn>
 
             </MDBCardBody>
