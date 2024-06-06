@@ -33,6 +33,76 @@ body {
   background-color: #EDECE1 !important;
 }
 
+.carrossel img {
+  width: 100%;
+  height: 35em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-cta {
+  width: 25rem;
+  height: 3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta_info {
+  font-size: 1.5rem;
+}
+
+.link-cta {
+  text-decoration: none;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+}
+
 .marg {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -208,6 +278,11 @@ body {
   height: 3rem;
 }
 
+.btn_cadastro {
+  width: 20rem;
+  height: 3rem;
+}
+
 footer {
   background-color: #EAD7A7;
   position: fixed;
@@ -238,7 +313,7 @@ footer {
   height: 24rem;
   border-radius: 5%;
   margin: 2em 2em;
-  background-color: #090A09;
+  background-color: #3d8f2f;
 }
 
 .painel-1-embaixo, .painel-2-embaixo, .painel-3-embaixo {
@@ -246,7 +321,7 @@ footer {
   height: 24rem;
   border-radius: 5%;
   margin: 2em 2em;
-  background-color: #090A09;
+  background-color: #3d8f2f;
 }
 
 .painel-2-embaixo, .painel-3-embaixo {
@@ -287,6 +362,10 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   height: 17rem;
+}
+
+#p-painel1, #p-painel2, #p-painel3 {
+  margin-left: 0.7rem;
 }
 
 @media screen and (max-width: 1023px) {

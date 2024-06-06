@@ -13,14 +13,14 @@ function Dashboard() {
                     <div className="painel-2">
                         <div className="texto-painel-2">
                             <h1 id="Titulo-painel-2">Vida Marinha</h1>
-                            <p>Aqui ficarão gráficos indicando as quantidades e a qualidade da vida marinha através do arduino</p>
+                            <p id="p-painel2">Aqui ficarão gráficos indicando as quantidades e a qualidade da vida marinha através do arduino</p>
                         </div>
                     </div>
 
                     <div className="painel-3">
                             <div className="texto-painel-3">
                                 <h1 id="Titulo-painel-3">Qualidade da Água</h1>
-                                <p>Aqui ficarão gráficos indicando a qualidade da agua através do arduino</p>
+                                <p id="p-painel3">Aqui ficarão gráficos indicando a qualidade da agua através do arduino</p>
                             </div>
                     </div>
                 </div>
@@ -39,14 +39,14 @@ function Dashboard() {
                     <div className="painel-2-embaixo">
                         <div className="texto-painel-2-embaixo">
                             <h1 id="Titulo-painel-2-embaixo">Absorção de Co2</h1>
-                            <p>Aqui ficarão gráficos indicando as quantidades e a qualidade da vida marinha</p>
+                            <p id="p-painel2">Aqui ficarão gráficos indicando as quantidades e a qualidade da vida marinha</p>
                         </div>
                     </div>
 
                     <div className="painel-3-embaixo">
                             <div className="texto-painel-3-embaixo">
                                 <h1 id="Titulo-painel-3-embaixo">Clima da Região</h1>
-                                <p>Aqui ficarão gráficos indicando a qualidade da agua</p>
+                                <p id="p-painel3">Aqui ficarão gráficos indicando a qualidade da agua</p>
                             </div>
                     </div>
                 </div>
